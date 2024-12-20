@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos de Nuestra Boda</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Galería de Fotos</h1>
+    <div class="gallery">
+        {% for image in images %}
+        <div class="photo">
+            <img src="{{ url_for('static', filename=image) }}" alt="Foto de la boda">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
